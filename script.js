@@ -20,10 +20,10 @@ gsap.to("#nav", {
     scrollTrigger: {
         trigger: "#nav",
         scroller: "body",
-        markers: true,
+        // markers: true,
         start: "top 0%",
         end: "top -10%",
-        scrub: true
+        scrub: 1
     }
 });
 
@@ -32,9 +32,23 @@ gsap.to("main",{
     scrollTrigger:{
         trigger:"main",
         scroller:"body",
-        markers:true,
+        // markers:true,
         start:"top -50%",
-        end:"top -100%",
+        end:"top -45%",
+        scrub:3
+    }
+})
+
+gsap.from("#about-us",{
+    y:50,
+    opacity: 0,
+    duration:1,
+    scrollTrigger:{
+        trigger:"#about-us",
+        scroller:"body",
+        // markers:true,
+        start:"top 50%",
+        end:"top 45%",
         scrub:2
     }
 })

@@ -1,52 +1,51 @@
- @font-face {
-        font-family: "golfFont";
-        src: url("./montserrat-latin-400-normal.woff2");
-    }
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: white; 
-    font-family: "golfFont", sans-serif;   
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Montserrat", sans-serif;
 }
 
-html,body{
-    height: 100%;
-    width: 100%;
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
 
-body{
-    /* overflow-x: hidden; */
+body {
+  /* overflow-x: hidden; */
 }
 
-::selection{
-    color: #95C11E;
-    background-color: #dadada;
+::selection {
+  color: #95c11e;
+  background-color: #dadada;
 }
 
-#nav{
-    position: fixed;
-    height: 120px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding:0 130px;
-    padding-top: 25px;
-    /* background-color: red; */
-    gap: 35px;
-    font-weight: 700;
-    text-transform: uppercase;
-    z-index: 11;
+#nav {
+  position: fixed;
+  height: 120px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 130px;
+  padding-top: 25px;
+  /* background-color: red; */
+  gap: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+  z-index: 11;
 }
 
-img{
-    height: 100px;
-    width: 100px;
+img {
+  height: 100px;
+  width: 100px;
 }
 
-video{
+video {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -78,52 +77,298 @@ main {
   text-transform: uppercase;
 }
 
-h1::before{
-    content: "Eat. Drink. Play.";
-    position: absolute;
-    color: #111;
-    top: -4px;
-    left: -2px;
-    -webkit-text-stroke: 2px #95C11E;
-    z-index: -1;
+#page1 h1::before {
+  content: "Eat. Drink. Play.";
+  position: absolute;
+  color: #111;
+  top: -4px;
+  left: -2px;
+  -webkit-text-stroke: 2px #95c11e;
+  z-index: -1;
 }
 
-main h3{
-    margin-top: 10px;
-    margin-bottom:10px;
-    font-size: 50px;
-    font-weight: 800;
-    text-transform: uppercase;
+main h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
-main p{
-    width: 75%;
-    font-size: 35px;
-    font-weight: 500;
+#page1 p {
+  width: 75%;
+  font-size: 35px;
+  font-weight: 500;
 }
 
-#page2{
-    min-height: 100vh;  
-    width: 100%;
-    position: relative;
-    z-index: 10;
-    /* background-color: black;  */ /*checking for */
+#page2 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  /* background-color: black;  */ /*checking for */
 }
 
-#cursor{
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    position: fixed;
-    background-color: #95C11E;
-    z-index: 10;
+#cursor {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  position: fixed;
+  background-color: #95c11e;
+  z-index: 10;
 }
 
-#cursor-blur{
-    height: 400px;
-    width: 400px;
-    background-color: #96c11e67;
-    position: fixed;
-    filter: blur(50px);
-    border-radius: 50%;
+#cursor-blur {
+  height: 400px;
+  width: 400px;
+  background-color: #96c11e6c;
+  position: fixed;
+  filter: blur(50px);
+  border-radius: 50%;
+  z-index: 9;
 }
+
+#scroller {
+  /* background-color: red; */
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+  z-index: 10;
+}
+
+#scroller-in {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 25s linear infinite;
+  position: relative;
+  z-index: 10;
+}
+
+#scroller-in h4 {
+  display: inline-block;
+  font-size: 120px;
+  font-weight: 700;
+  margin-right: 40px;
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff;
+  text-transform: uppercase;
+  z-index: -1;
+}
+
+#scroller h4:hover {
+  color: #95c11e;
+  transition: all linear 0.5s;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+#about-us {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 60px;
+}
+
+#about-us-in {
+  text-align: center;
+  width: 55%;
+}
+
+#img1 img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#img2 img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#about-us-in h2 {
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+#about-us-in p {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+#about-us-in #p-1 {
+  font-size: 20px;
+  line-height: 33px;
+}
+
+#about-us-in #p-2 {
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 33px;
+}
+
+#card-conatiner {
+  margin-top: 100px;
+  height: 60vh;
+  width: 100%;
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  z-index: 10;
+}
+
+.card {
+  height: 400px;
+  width: 350px;
+  border-radius: 20px;
+}
+
+#card-1 {
+  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer.jpg?strip=all&sharp=1);
+  background-size: cover;
+  overflow: hidden;
+}
+
+#card-2 {
+  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4.jpg?strip=all&sharp=1);
+  background-size: cover;
+  overflow: hidden;
+}
+
+#card-3 {
+  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons.jpg?strip=all&sharp=1);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.overlay {
+  padding: 50px;
+  height: 100%;
+  width: 100%;
+  background-color: #95c11e;
+  opacity: 0;
+  transition: all ease 0.7s;
+}
+
+.overlay h3 {
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: rotate3d(5, 3, 0, 20deg);
+}
+
+#infoDiv {
+  margin-top: 100px;
+  height: 35vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #95c11e;
+}
+
+#infoDiv img {
+  height: 100%;
+  width: 10%;
+  object-fit: cover;
+}
+
+#infoDiv h3 {
+  width: 60%;
+  font-size: 35px;
+  text-align: center;
+  font-weight: 800;
+  color: #111;
+}
+
+#page3{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  /* background-color: red; */
+}
+
+#content{
+  height: 80vh;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  gap: 100px;
+}
+
+#left-content img{
+  height: 400px;
+  width: 600px;
+  border-radius: 20px;
+}
+
+#right-content{
+  height: 400px;
+  width: 490px;
+  /* background-color: #95c11e; */
+}
+
+#right-content h1{
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: 800;
+  padding: 0 10px;
+}
+
+#right-content #right-para-1{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 0 10px;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+
+#right-content #right-para-2{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 0 10px;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+
+#right-content button{
+  margin-top: 15px;
+  padding: 15px 20px;
+  font-size: 20px;
+  background-color: transparent;
+  border: 2px solid #95c11e;
+  border-radius: 50px;
+  transition: all ease 0.5s;
+}
+
+#right-content button:hover{
+  background-color: #95c11e;
+  color: black;
+}
+
